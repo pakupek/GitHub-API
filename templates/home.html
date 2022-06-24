@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KentBeck</title>
+</head>
+<body>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Contributors Count</th>
+          <th>Branch</th>
+          <th>Is Protected</th>
+        </tr>
+        
+            {% for repository,contributor in data %}
+                <tr>
+                    <td>{{ repository.name }}</td>
+                    <td>{{ repository.size }}</td>
+                    <td>{{ contributor }}</td>
+                    <td>{{ repository.default_branch }}</td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+        
+      </table>
+</body>
+</html>
