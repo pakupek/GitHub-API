@@ -13,12 +13,12 @@
           <th>Is Protected</th>
         </tr>
         
-            {% for repository,contributor in data %}
+            {% for repository,contributor,branch in data %}
                 <tr>
                     <td>{{ repository.name }}</td>
                     <td>{{ repository.size }}</td>
                     <td>{{ contributor }}</td>
-                    <td>{{ repository.default_branch }}</td>
+                    <td>{{ branch }}</td>
                     <td></td>
                 </tr>
             {% endfor %}
